@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+
+  height: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#BAI__TAP__QUAN__LY__HOC__SINH input {
+  width: 366px;
+}
+
+#BAI__TAP__QUAN__LY__HOC__SINH select {
+  margin: 6px 0;
+}
+
+#BAI__TAP__QUAN__LY__HOC__SINH #area {
+  width: 366px;
+  padding: 3px 0;
+}
+
+#BAI__TAP__QUAN__LY__HOC__SINH #object {
+  width: 366px;
+  padding: 3px 0;
+}
+
+#BAI__TAP__QUAN__LY__HOC__SINH input {
+  margin: 6px 0;
+}
+
+#result {
+  background-color: lightblue;
+  padding: 5px 10px;
+  display: none;
+}
+
+#TINH_TIEN_DIEN {
+  margin-top: 100px;
+}

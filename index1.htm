@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replace tr with 000000</title>
+  </head>
+  <body>
+    <div class="container">
+      <label for="amount">Enter an amount:</label>
+      <input
+        id="amount"
+        onchange="replaceTr()"
+        type="text"
+        placeholder="nhap so tien"
+      />
+      <div class="result"></div>
+    </div>
+    <script>
+      function replaceTr() {
+        var amountField = document.getElementById("amount");
+        var amount = amountField.value;
+
+        // Thay thế tất cả chuỗi "tr" bằng "000000"
+        var replacedAmount = amount.replace(/tr/g, "000000");
+
+        // Cập nhật lại giá trị của input field
+        amountField.value = replacedAmount;
+
+        // Hiển thị kết quả trong phần tử có class là "result"
+        document.querySelector(".result").innerHTML =
+          "Kết quả: " + replacedAmount;
+      }
+    </script>
+    <script src="./index_test.js"></script>
+  </body>
+</html>

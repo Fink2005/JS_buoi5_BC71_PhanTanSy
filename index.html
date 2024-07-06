@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./sacdep.css" />
+  </head>
+
+  <body>
+    <section id="BAI__TAP__QUAN__LY__HOC__SINH">
+      <h1>QUẢN LÝ TUYỂN SINH</h1>
+      <div id="manage" class="container">
+        <span>
+          Điểm chuẩn:
+          <input
+            style="margin-left: 83px"
+            id="diem_chuan"
+            type="text"
+            placeholder="Nhập điểm chuẩn"
+        /></span>
+        <span
+          >Khu vực:
+          <select style="margin-left: 111px" name="" id="area">
+            <option value="">Lựa chọn khu vực</option>
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+            <option value="0">X</option>
+          </select></span
+        >
+        <span
+          >Đối tượng:
+          <select style="margin-left: 98px" name="" id="object">
+            <option value="">Lựa chọn đối tượng</option>
+            <option value="1">3</option>
+            <option value="1.5">2</option>
+            <option value="2.5">1</option>
+            <option value="0">0</option>
+          </select></span
+        >
+        <span
+          >Điểm môn 1:
+          <input
+            style="margin-left: 83px"
+            id="mon1"
+            type="text"
+            placeholder="Nhập điểm môn 1"
+        /></span>
+        <span
+          >Điểm môn 2:
+          <input
+            style="margin-left: 81px"
+            id="mon2"
+            type="text"
+            placeholder="Nhập điểm môn 2"
+        /></span>
+        <span
+          >Điểm môn 3:
+          <input
+            style="margin-left: 81px"
+            id="mon3"
+            type="text"
+            placeholder="Nhập điểm môn 3"
+        /></span>
+        <button class="btn btn-primary" onclick="manage()">TÍNH TOÁN</button>
+        <div id="result" class="card p-3"></div>
+      </div>
+    </section>
+    <section id="TINH_TIEN_DIEN">
+      <h1>TÍNH TIỀN ĐIỆN</h1>
+      <div class="container p-5">
+        <input id="full_name" type="text" placeholder="Nhập họ và tên" />
+        <input id="kw" type="text " placeholder="nhập số kw" />
+        <button class="btn btn-primary" onclick="calElectric()">
+          Tính toán
+        </button>
+        <div
+          id="result2"
+          class="card d-flex justify-content-center align-items-center"
+        >
+          Tiền điện tháng này của bạn là: 🤌🏻🤌🏻
+        </div>
+      </div>
+    </section>
+    <section id="THUE_THU_NHAP_CA_NHAN">
+      <h1>TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+      <div class="container p-5">
+        <input id="name2" type="text" placeholder="Nhập họ và tên" />
+        <input id="salary" type="" placeholder="Nhập số lương 1 năm" />
+        <input
+          id="person"
+          type="number"
+          placeholder="Nhập số người phụ thuộc"
+        />
+        <button class="btn btn-primary" onclick="caltax()">Tính toán</button>
+        <div
+          id="result3"
+          class="card d-flex justify-content-center align-items-center"
+        >
+          Tiền thuế tháng này của bạn là: 🤌🏻🤌🏻
+        </div>
+      </div>
+    </section>
+    <section id="TINH TIEN CAP">
+      <h1>TÍNH TIỀN CÁP</h1>
+      <div class="container p-5">
+        <label for="objects"></label>
+        <select name="" id="objects" onchange="exchange()">
+          <option value="select">lựa chọn khách hàng</option>
+          <option value="resident">Nhà dân</option>
+          <option value="business">Doanh nghiệp</option>
+        </select>
+        <input id="customer" type="text" placeholder="nhap ma khach hang" />
+        <input id="channel" type="number" placeholder="Số kênh cao cấp" />
+        <input
+          style="display: none"
+          id="connection"
+          type="number"
+          placeholder="Số kết nối"
+        />
+        <button class="btn btn-primary" onclick="calculateCap()">
+          Tính toán
+        </button>
+        <div
+          id="result4"
+          class="card d-flex justify-content-center align-items-center"
+        >
+          Tiền thuế tháng này của bạn là: 🤌🏻🤌🏻
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

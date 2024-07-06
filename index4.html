@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <label for="name">Enter a name:</label>
+      <input
+        id="name"
+        onchange="showResult()"
+        type="text"
+        placeholder="nhap ten cho nay"
+      />
+      <div class="result"></div>
+    </div>
+    <script>
+      function change() {
+        var doi = document.getElementById("name").value;
+
+        if (doi == "sy") {
+          var replace = doi.replace(/sy/g, 1000);
+          return "Đúng rồi: " + replace;
+        } else {
+          return "sai";
+        }
+      }
+
+      function showResult() {
+        var result = change();
+        document.querySelector(".result").innerHTML = result;
+      }
+    </script>
+    <script src="./index_test.js"></script>
+  </body>
+</html>
